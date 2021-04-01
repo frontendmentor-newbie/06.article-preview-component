@@ -1,0 +1,141 @@
+:root {
+    --bg-body: #edf2f8;
+    --dark-text: #4b5260;
+    --light-text: #848c97;
+  
+    --name-text: #535a62;
+    --date-text: #babdc6;
+  
+    --bg-social-bar: #49556b;
+    --text-share: #79859b;
+    --bg-icon-share: #eef2f9;
+    --bg-icon-share-active: #6f8199;
+  }
+  
+body{
+    margin:0;
+    background-color:var(--bg-body);
+    font-family: 'Manrope', sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 100px 25px;
+}
+
+
+.header{
+    overflow: hidden;
+    height: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header__image{
+    max-width: 100%;
+    position: relative;
+    top: -16px;
+}
+
+
+.article{
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.article__title{
+    font-size: 16px;
+    color: var(--dark-text);
+    line-height: 1.5;
+    padding: 0 30px;
+}
+
+.article__text{
+    font-size: 13px;
+    width:256px;
+    color: var(--light-text);
+    line-height: 1.6;
+    padding: 0 30px;
+}
+
+.footer{
+    display:flex;
+    align-items: center;
+    padding-top:20px;
+    position: relative;
+}
+
+.footer__avatar{
+    border-radius: 50%;
+    max-width: 12%;
+    margin: -20px 15px 0 30px;
+}
+
+.footer__info{
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+.footer__name{
+    font-size: 13px;
+    color: var(--name-text);
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer__date{
+    font-size: 12px;
+    color: var(--date-text);
+    margin: 0;
+}
+
+.share{
+    display: flex;
+    position: relative;
+    text-align: center;
+    background-color: var(--bg-icon-share);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    margin-top: -10px;
+}
+
+.share--active{
+    background-color: var(--bg-icon-share-active);
+}
+
+.share--active .share__icon{
+    filter: brightness(0) invert(1);
+}
+
+.tooltip{
+    background-color: var(--bg-social-bar);
+    align-items: center;
+    width: 100%;
+    display: flex;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    height: 64px;
+    padding: 10px 30px;
+    margin-bottom: 5px;
+    transition: opacity 0.3s ;
+}
+
+.tooltip__text{
+    letter-spacing: 5px;
+    color: var(--text-share);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.tooltip__icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.tooltip--show{
+    opacity: 1;
+}
